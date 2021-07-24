@@ -23,6 +23,10 @@ p {
 	margin-bottom: 0.5rem;
 }
 
+h1, h2, h3 {
+	font-family: Inter;
+}
+
 h2, h3 {
 	display: inline-block;
 	margin: 1.5rem 0 0.5rem 0;

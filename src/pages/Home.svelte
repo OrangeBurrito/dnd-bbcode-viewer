@@ -6,6 +6,7 @@
 	onMount(async () => {
 		const resp = await fetch('data.txt')
 		text = await resp.text()
+		parseData(text)
 	})
 
 	function debounce(fn, delay) {
@@ -19,10 +20,14 @@
 
 	let text = ""
 	let output = ""
+
+	function handleInput(e) {
+		parseData(e.target.value)
+	}
 	
 	function parseData(data) {
 		output = marked(bbCodeParser.parse(
-			data.target.value
+			data
 				.replace(/^(.*)/m, `<h1 class="name">$1</h1>`)
 				.replace(/\n/g, "\n\n")
 				.replaceAll(/\[\s(.*?)\s\]/g, "<h3>$1</h3>".toLowerCase())
@@ -47,7 +52,7 @@
 			  bind:value={text}
 				id="textarea-input"
 				placeholder="Paste your BBCode here!" 
-				on:input={debounce(parseData, 300)}/>
+				on:input={debounce(handleInput, 300)}/>
 
 		</div>
 	</div>
@@ -76,7 +81,6 @@
 		text-align: center;
 		color: var(--white);
 	}
-
 	
 	.title {
 		text-shadow: -4px 4px var(--dark);

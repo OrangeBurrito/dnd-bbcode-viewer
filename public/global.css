@@ -4,13 +4,13 @@
 	box-sizing: border-box;
 }
 
-:root {
-	--black: #1c2133;
-	--dark: #38405f;
-	--medium: #647aa3;
-	--light: #afc1d6;
-	--white: #f7f9f7;
-}
+	:root {
+		--black: #1c2133;
+		--dark: #38405f;
+		--medium: #647aa3;
+		--light: #afc1d6;
+		--white: #f7f9f7;
+	}
 
 body {
 	font-family: Helvetica, sans-serif;

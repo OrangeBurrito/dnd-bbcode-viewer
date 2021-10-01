@@ -1,47 +1,50 @@
 OrangeBurrito
-Rogue 1 (0 XP)
-Human (f), Neutral
+Rogue (Thief) 5 (0 XP)
+Human (f), Chaotic neutral
 Urchin
 [ ABILITY SCORES ]
-[b]Str[/b] 8 (-1)   [b]Dex[/b] 16 (+3)   [b]Con[/b] 13 (+1)   [b]Int[/b] 13 (+1)   [b]Wis[/b] 10 (+0)   [b]Cha[/b] 12 (+1)  
+[b]Str[/b] 8 (-1)   [b]Dex[/b] 17 (+3)   [b]Con[/b] 17 (+3)   [b]Int[/b] 14 (+2)   [b]Wis[/b] 13 (+1)   [b]Cha[/b] 9 (-1)  
 [ PROFICIENCIES ]
-[b]Proficiency Bonus[/b] +2
-[b]Saves[/b] Dex +5, Int +3
-[b]Skills[/b] Deception +5, Insight +2, Investigation +3, Perception +2, Sleight of Hand +5, Stealth +7 (passive Perception 12)
+[b]Proficiency Bonus[/b] +3
+[b]Saves[/b] Dex +6, Int +5
+[b]Skills[/b] Deception +5, Investigation +5, Perception +4, Sleight of Hand +6, Stealth +9 (passive Perception 14)
 [b]Weapons[/b] simple weapons, hand crossbow, shortsword, longsword, rapier, shortbow
-[b]Armors[/b] Light armor
+[b]Armors[/b] light armor
 [b]Tools[/b] thieves' tools, disguise kit, forgery kit
-[b]Languages[/b] Common, Orc, Thieves' cant
+[b]Languages[/b] Common, Dwarvish, Thieves' cant
 [ COMBAT ]
-[b]hp[/b] 9 ; [b]HD[/b] 1d8
+[b]hp[/b] 33 ; [b]HD[/b] 5d8
 [b]Init[/b] +3 ; [b]Speed[/b] 30 ft
-[b]AC[/b] 14 (padded 11, Dex +3)
-[b]Dart[/b]. [i]Ranged[/i] : +5 (1d4+3 piercing ; finesse, thrown (range 20/60))
-[b]Dart[/b]. [i]Ranged[/i] : +5 (1d4+3 piercing ; finesse, thrown (range 20/60))
-[b]Blowgun[/b]. [i]Ranged[/i] : +3 (1+3 piercing ; ammunition (range 25/100), loading)
+[b]AC[/b] 14 (leather 11, Dex +3)
+[b]Trident[/b]. [i]Melee[/i] : -1 (1d6-1 piercing ; thrown (range 20/60), versatile (1d8))
+[b]Net[/b]. [i]Ranged[/i] : +3 (-+3 - ; special, thrown (range 5/15))
+[b]Dagger[/b]. [i]Melee[/i] : +6 (1d4+3 piercing ; finesse, light, thrown (range 20/60))
 [ SPELLS ]
 [ FEATURES & TRAITS ]
 Expertise * (Deception, Stealth)
-Sneak Attack (+1d6)
+Sneak Attack (+3d6)
+Cunning Action (+1 bonus action)
+Second-Story Work
+Fast Hands
+Uncanny Dodge
 City Secrets
 
 [b]Additional Features[/b] excessive amounts of old candy wrappers in pockets and hands that are always cold for some reason
 [ EQUIPMENT ]
-Dart (4), dart (4), blowgun (2), padded, thieves' tools, a hunk of parmesan cheese(1), a medium sized blue backpack(1), an air horn(1), spoons (2), pool cue(1), feral raccoon I found in the dumpster(1), pop tarts(4)
-[b]Equipment weight[/b] 13 lb - [b]Cost[/b] 550.4 gp
+Trident, net, dagger (2), leather, thieves' tools, forgery kit, acid/vial, backpack, lantern/hooded (5), bedroll, waterskin, clothes/common, a hunk of parmesan cheese, an air horn, pop tarts and a pool cue
+[b]Equipment weight[/b] 53 lb - [b]Cost[/b] 613.7 gp
 500 gp
 [b]Coins weight[/b] 5 lb
 a hundred bucks in a currency no one uses, gym membership that expired 6 months ago, a small machine that produces endless amounts of breadsticks, jar of bees
 [ CHARACTER ]
-[b]Height[/b] Medium / 5.2 ft / 110 lb. ; [b]Age[/b] 21 years
-[b]Eyes[/b] they work well ; [b]Skin[/b] it's skin ; [b]Hair[/b] it's hair
+[b]Height[/b] Medium / 5.3 ft / 110 lb. ; [b]Age[/b] 21 years
+[b]Eyes[/b] They work well ; [b]Skin[/b] it's skin ; [b]Hair[/b] it's hair
 [b]Appearance[/b] Sports a denim hat and the most obnoxiously blue off-brand crocs you'll ever see.
-Has a blue backpack. 
 
 [b]Personality traits[/b] overly skeptical, mischievous, literally incomprehensible at times, unpatriotic, secretive
 [b]Ideals[/b] being a billionaire and not telling anyone, the fashion industry finally making female pants with huge pockets
 [b]Bonds[/b] Bond, James Bond
-[b]Flaws[/b] short-tempered, impatient, manipulative, horrible at reading people,
+[b]Flaws[/b] short-tempered, impatient, manipulative, horrible at reading people.
 
 [b]Background[/b] Urchin
 [b]Character Backstory[/b] Created by some person who googled "dnd character creator" after hearing about this cool radfem D&D session, is literally that person.

@@ -27,7 +27,33 @@ h1, h2, h3 {
 	font-family: Inter;
 }
 
-h2, h3 {
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+/* a {
+	color: var(--medium);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--dark);
+} */
+
+h2, .bbcode-container h3 {
 	display: inline-block;
 	margin: 1.5rem 0 0.5rem 0;
 	border-bottom: 2px solid var(--black);

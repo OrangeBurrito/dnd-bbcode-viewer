@@ -1,70 +1,78 @@
 <script>
-	import {onMount} from 'svelte'
+	import { onMount } from "svelte";
 	import bbCodeParser from "js-bbcode-parser";
 	import marked from "marked";
 
+	import Modal from '../components/Modal.svelte'
+
 	onMount(async () => {
-		const resp = await fetch('data.txt')
-		text = await resp.text()
-		parseData(text)
-	})
+		const resp = await fetch("data.txt");
+		text = await resp.text();
+		parseData(text);
+	});
 
 	function debounce(fn, delay) {
-		let timerID = null
+		let timerID = null;
 
-		return function(...args) {
-			clearTimeout(timerID)
-			timerID = setTimeout(() => fn.apply(null, args), delay)
-		}
+		return function (...args) {
+			clearTimeout(timerID);
+			timerID = setTimeout(() => fn.apply(null, args), delay);
+		};
 	}
 
-	let text = ""
-	let output = ""
+	let text = "";
+	let output = "";
 
 	function handleInput(e) {
-		parseData(e.target.value)
+		parseData(e.target.value);
 	}
-	
+
 	function parseData(data) {
-		output = marked(bbCodeParser.parse(
-			data
-				.replace(/^(.*)/m, `<h1 class="name">$1</h1>`)
-				.replace(/\n/g, "\n\n")
-				.replaceAll(/\[\s(.*?)\s\]/g, "<h3>$1</h3>".toLowerCase())
-				.replace(/[;]/g, "&nbsp;&nbsp;")
-		))
+		output = marked(
+			bbCodeParser.parse(
+				data
+					.replace(/^(.*)/m, `<h1 class="name">$1</h1>`)
+					.replace(/\n/g, "\n\n")
+					.replaceAll(/\[\s(.*?)\s\]/g, "<h3>$1</h3>".toLowerCase())
+					.replace(/[;]/g, "&nbsp;&nbsp;")
+			)
+		);
 	}
 
 	function clearData() {
-		output = ""	
-		text = ""
+		output = "";
+		text = "";
 	}
+
 </script>
 
 <main>
-	<div class="submit section">
-		<div class="header">
+	<section>
+		<header>
 			<h1 class="title">D&D Character Viewer</h1>
-			<h1 class="input-text">Input</h1>
-		</div>
-		<div class="content">
-			<textarea 
-			  bind:value={text}
+			<h1 class="type">Input</h1>
+		</header>
+
+		<div class="editor">
+			<textarea
+				bind:value={text}
 				id="textarea-input"
-				placeholder="Paste your BBCode here!" 
-				on:input={debounce(handleInput, 300)}/>
-
+				placeholder="Paste your BBCode here!"
+				on:input={debounce(handleInput, 300)}
+			/>
 		</div>
-	</div>
+	</section>
 
-	<div class="output section">
-		<div class="header">
-			<h1 class="title">Output</h1>
-		</div>
-		<div class="bbcode-container">
+	<section>
+		<header>
+			<Modal/>
+			<h1 class="type">Output</h1>
+		</header>
+
+		<div class="bbcode-container" >
 			{@html output}
 		</div>
-	</div>
+	</section>
 </main>
 
 <style>
@@ -76,49 +84,34 @@
 		margin: 1rem;
 	}
 
-	.header {
-		width: 100%;
-		text-align: center;
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		color: var(--white);
+		background: var(--medium);
 	}
-	
-	.title {
+
+	header .title {
+		font-family: "IBM Plex Mono";
 		text-shadow: -4px 4px var(--dark);
 	}
+
+	header h1 {
+		padding: 1rem 2rem;
+	}
+
+	header .type {
+		background: var(--dark);
+	}
 	
-	.submit .header {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-	}
-
-	.submit .title {
-		background: var(--medium);
-		padding: 1rem;
-	}
-
-	.header .input-text {
-		background: var(--dark);
-		padding: 1rem;
-	}
-
-	.submit .title {
-		font-family: "IBM Plex Mono";
-	}
-
-	.output .header {
-		background: var(--dark);
-		padding: 1rem;
-	}
-
-
-
-	.section {
+	section {
 		overflow: hidden;
 		background: var(--white);
 		border-radius: 15px;
 	}
 
-	.submit .content {
+	section .editor {
 		display: flex;
 		padding: 1rem;
 		height: 90%;
@@ -131,7 +124,7 @@
 		padding: 1rem;
 		border: none;
 		border-bottom: 1px solid var(--black);
-		background: rgba(175,193,214, 0.25);
+		background: rgba(175, 193, 214, 0.25);
 
 		width: 100%;
 	}
@@ -142,6 +135,12 @@
 		padding: 1rem;
 		padding-bottom: 5rem;
 	}
+
+	/* .bbcode-container :global(h2), .bbcode-container :global(h3) {
+		display: inline-block;
+		margin: 1.5rem 0 0.5rem 0;
+		border-bottom: 2px solid var(--black);
+	} */
 
 	:global(br) {
 		margin-bottom: 1rem;
